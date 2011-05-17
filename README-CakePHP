@@ -1,0 +1,11 @@
+For CakePHP users.
+
+set the SecurePHP package in your plugins directory.
+
+write boot code in your bootstrap(app/config/bootstrap.php)
+
+<code>
+  require_once(App::pluginPath('secure_php').'config'.DS.'bootstrap.php');
+</code>
+
+
