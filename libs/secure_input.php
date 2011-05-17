@@ -36,9 +36,8 @@ class SecureInput {
  */
 	public static function delete_cntrl_char($data) {
 		if ( is_array( $data ) ) {
-			return array_map( 'self::delete_cntrl_char', $data );
+			return array_map( array('self','delete_cntrl_char'), $data );
 		}
-
 		return preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/','', $data);
 	}
 
