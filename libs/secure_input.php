@@ -23,6 +23,7 @@ class SecureInput {
 		$_GET = self::delete_cntrl_char($_GET);
 		$_POST = self::delete_cntrl_char($_POST);
 		$_COOKIE = self::delete_cntrl_char($_COOKIE);
+		$_REQUEST = self::delete_cntrl_char($_REQUEST);
 		$_SERVER = self::delete_cntrl_char($_SERVER);
 
 		$_SERVER['PHP_SELF'] = strip_tags($_SERVER['PHP_SELF']);
