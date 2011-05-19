@@ -18,7 +18,6 @@ class SecureInputTest extends PHPUnit_Framework_TestCase
 		$expect = array('a1' => "aabbb", 'b1' => 'bbbccc', 'c1' => "ccc\x0addd");
 
 		$result = SecureInput::delete_cntrl_char($input);
-var_dump();
 
 		$this->assertEquals($expect, $result);
 	}
