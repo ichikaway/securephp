@@ -2,7 +2,9 @@ SecurePHP is the package for security.
 
 Provide functions as follow.
 
-1. Cleanup of input data(POST,GET,COOKIE,SERVER,REQUEST)
+1. check input data(POST,GET,COOKIE,SERVER,REQUEST)
+ (a). delete control byte char
+ (b). delete invalid key name(ex. array('_SERVER' =>....) )
 
 
 
