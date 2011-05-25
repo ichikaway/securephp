@@ -14,6 +14,6 @@
 	$SECURE_PHP_LIBS = dirname(dirname(__FILE__)). DIRECTORY_SEPARATOR . 'libs'. DIRECTORY_SEPARATOR;
 
 	//clenup input data
-	require_once($SECURE_PHP_LIBS . 'secure_input.php');
-	SecureInput::clean_input_data();
+	require_once($SECURE_PHP_LIBS . 'secure_input_filter.php');
+	SecureInputFilter::clean_input_data();
 

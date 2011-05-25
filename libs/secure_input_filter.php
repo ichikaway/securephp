@@ -8,10 +8,10 @@
  *
  * @copyright     Copyright 2011, Yasushi Ichikawa http://github.com/ichikaway/
  * @package       secure_php
- * @subpackage    secure_php.SecureInput
+ * @subpackage    secure_php.SecureInputFilter
  * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
  */
-class SecureInput {
+class SecureInputFilter {
 
 /**
  * invalid array keys, these keys are used for global variable name
