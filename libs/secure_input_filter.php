@@ -19,9 +19,9 @@ class SecureInputFilter {
  * @access protected
  * @var array
  */
-		protected static $deleteKeys = array(
+	protected static $deleteKeys = array(
 			'_GET', '_POST', '_SERVER', '_FILES', '_REQUEST', '_SESSION', '_ENV', 'GLOBALS'
-		);
+			);
 
 /**
  * Regex pattern of valid key name
@@ -29,7 +29,7 @@ class SecureInputFilter {
  * @access protected
  * @var array
  */
-		protected static $allowKeyNameRegex = '/^[a-z0-9:_\.\/\-]+$/i';
+	protected static $allowKeyNameRegex = '/^[a-z0-9:_\.\/\-]+$/i';
 
 /**
  * Inserts multiple values into a table
