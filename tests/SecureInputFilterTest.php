@@ -44,5 +44,17 @@ class SecureInputFilterTest extends PHPUnit_Framework_TestCase
 	}
 
 
+	public function  testClean_key_value_with_Mongo_injection() {
+		$input = array(
+				'a1' => "aa\x00bbb_ok", '$in' => array('aa','bb'),
+				);
+		$expect = array('a1' => "aabbb_ok");
+
+		$result = SecureInputFilter::clean_key_value($input);
+		$this->assertEquals($expect, $result);
+	}
+
+
+
 }
 ?>
