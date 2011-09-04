@@ -1,11 +1,13 @@
-SecurePHP is the package for security.
+SecurePHP is the library for security.
 
 Provide functions as follow.
 
-1. check input data(POST,GET,COOKIE,SERVER,REQUEST)
+1. check input data(POST,GET,COOKIE,SERVER,REQUEST) and delete invalid data.
  (a). delete control byte char
  (b). delete invalid key name(ex. array('_SERVER' =>....) )
 
 
-
+Usage: 
+include bootstrap.php of SecurePHP library.
+require_once('secure_php/config/bootstrap.php');
 
