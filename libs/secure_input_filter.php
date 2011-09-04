@@ -45,8 +45,6 @@ class SecureInputFilter {
 		$_REQUEST = self::clean_key_value($_REQUEST);
 		$_SERVER = self::clean_key_value($_SERVER);
 
-		$_SERVER['PHP_SELF'] = strip_tags($_SERVER['PHP_SELF']);
-
 	}
 
 
