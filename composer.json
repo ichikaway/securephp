@@ -1,7 +1,7 @@
 {
 	"name": "ichikaway/securephp",
 	"description": "SecurePHP is the PHP library for security. Delete control characters(ex. null byte) and invalid array keyname(_SERVER, _GET, etc)",
-	"type": "PHP Library",
+	"type": "PHP",
 	"keywords": ["php", "security"],
 	"homepage": "https://github.com/ichikaway/securephp",
 	"license": "MIT",
