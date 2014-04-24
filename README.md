@@ -1,16 +1,17 @@
-SecurePHP is the library for security.
-
-Provide functions as follow.
-
-1. check input data(POST,GET,COOKIE,SERVER,REQUEST) and delete invalid data.
- (a). delete control byte char
- (b). delete invalid key name(ex. array('_SERVER' =>....) )
+## SecurePHP is the library for security.
 
 
-Usage: 
+* check input data(POST,GET,COOKIE,SERVER,REQUEST) and delete invalid data.
+  - delete control byte char  
+  - delete invalid key name(ex. array('_SERVER' =>....) )  
+
+
+### Usage: 
 include bootstrap.php of SecurePHP library.
 require_once('securephp/Config/bootstrap.php');
 
+
+### Composer
 If you want to install with composer,
 ```json
 {
@@ -23,7 +24,7 @@ If you want to install with composer,
 }
 ```
 
-and autoload and execute.
+and require autoload.php and execute method.
 
 ```php
 require('vendor/autoload.php');
