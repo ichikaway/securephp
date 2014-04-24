@@ -9,5 +9,23 @@ Provide functions as follow.
 
 Usage: 
 include bootstrap.php of SecurePHP library.
-require_once('secure_php/config/bootstrap.php');
+require_once('securephp/Config/bootstrap.php');
 
+If you want to install with composer,
+```json
+{
+	"require": {
+		"ichikaway/securephp": "dev-master"
+	},
+	"autoload": {
+		"files": ["vendor/ichikaway/securephp/Libs/SecureInputFilter.php"]
+	}
+}
+```
+
+and autoload and execute.
+
+```php
+require('vendor/autoload.php');
+SecureInputFilter::clean_input_data();
+```
