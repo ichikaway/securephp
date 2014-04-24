@@ -2,7 +2,7 @@
 
 
 * check input data(POST,GET,COOKIE,SERVER,REQUEST) and delete invalid data.
-  - delete control byte char  
+  - delete control byte char(ex. null byte) 
   - delete invalid key name(ex. array('_SERVER' =>....) )  
 
 
