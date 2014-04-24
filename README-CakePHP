@@ -6,7 +6,7 @@ Import secure_php bootstrap in webapp/index.php, require_once must be called bef
 <code>
   } else {
     //import secure_php bootstrap
-    require_once('YOUR_PLUGIN_PATH/plugins/secure_php/config/bootstrap.php');
+    require_once('YOUR_PLUGIN_PATH/plugins/securephp/Config/bootstrap.php');
 
     $Dispatcher = new Dispatcher();
     $Dispatcher->dispatch();
