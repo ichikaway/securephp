@@ -1,0 +1,23 @@
+{
+	"name": "ichikaway/SecurePHP",
+	"description": "SecurePHP is the PHP library for security",
+	"type": "PHP Library",
+	"keywords": ["php", "security"],
+	"homepage": "https://github.com/ichikaway/SecurePHP",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Yasushi Ichikawa",
+			"homepage": "http://twitter.com/ichikaway",
+			"role": "Author"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/ichikaway/SecurePHP/issues",
+		"source": "https://github.com/ichikaway/SecurePHP"
+	},
+	"require": {
+		"php": ">=5.0.0",
+		"composer/installers": "*"
+	}
+}
