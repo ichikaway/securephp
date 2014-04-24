@@ -1,9 +1,9 @@
 {
 	"name": "ichikaway/SecurePHP",
-	"description": "SecurePHP is the PHP library for security",
+	"description": "SecurePHP is the PHP library for security. Delete control characters(ex. null byte) and invalid array keyname( ex. $_GET[_SERVER]",
 	"type": "PHP Library",
 	"keywords": ["php", "security"],
-	"homepage": "https://github.com/ichikaway/SecurePHP",
+	"homepage": "https://github.com/ichikaway/securephp",
 	"license": "MIT",
 	"authors": [
 		{
@@ -13,8 +13,8 @@
 		}
 	],
 	"support": {
-		"issues": "https://github.com/ichikaway/SecurePHP/issues",
-		"source": "https://github.com/ichikaway/SecurePHP"
+		"issues": "https://github.com/ichikaway/securephp/issues",
+		"source": "https://github.com/ichikaway/securephp"
 	},
 	"require": {
 		"php": ">=5.0.0",
