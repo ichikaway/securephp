@@ -1,7 +1,7 @@
 <?php
 
 
-require_once "../libs/secure_input_filter.php";
+require_once "Libs/SecureInputFilter.php";
 
 /**
  * Unit test suite for the SecurePHP package
