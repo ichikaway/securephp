@@ -11,9 +11,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
  */
 
-	$SECURE_PHP_LIBS = dirname(dirname(__FILE__)). DIRECTORY_SEPARATOR . 'libs'. DIRECTORY_SEPARATOR;
+	$SECURE_PHP_LIBS = dirname(dirname(__FILE__)). DIRECTORY_SEPARATOR . 'Libs'. DIRECTORY_SEPARATOR;
 
 	//clenup input data
-	require_once($SECURE_PHP_LIBS . 'secure_input_filter.php');
+	require_once($SECURE_PHP_LIBS . 'SecureInputFilter.php');
 	SecureInputFilter::clean_input_data();
-
