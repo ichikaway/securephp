@@ -55,6 +55,48 @@ class SecureInputFilterTest extends PHPUnit_Framework_TestCase
 	}
 
 
+	public function  test_array_key_sqli_filter() {
+		$input = array(
+			'a1' => "ok", 'foo =1 or 1=1' => 'delete', 'onlyValue'
+		);
+		$expect = array('a1' => "ok", 'onlyValue');
+
+		$result = SecureInputFilter::clean_key_value($input);
+		$this->assertEquals($expect, $result);
+	}
+
+	public function  test_array_key_sqli_comment_filter() {
+		$input = array(
+			'a1' => "ok", 'foo--' => 'delete'
+		);
+		$expect = array('a1' => "ok");
+
+		$result = SecureInputFilter::clean_key_value($input);
+		$this->assertEquals($expect, $result);
+	}
+
+	public function  test_array_key_NOT_sqli_comment_filter() {
+		$input = array(
+			'a1' => "ok", 'foo-bar-' => 'ok'
+		);
+		$expect = array('a1' => "ok", 'foo-bar-' => 'ok');
+
+		$result = SecureInputFilter::clean_key_value($input);
+		$this->assertEquals($expect, $result);
+	}
+
+
+	public function  test_array_key_sqli_filter_in_array() {
+		$input = array(
+			'a1' => "ok", 'a2' => array('id = 1 or 1=1'=>111),
+		);
+		$expect = array('a1' => "ok", 'a2' => array());
+
+		$result = SecureInputFilter::clean_key_value($input);
+		$this->assertEquals($expect, $result);
+	}
+
+
 
 }
 ?>
