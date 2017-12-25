@@ -32,6 +32,15 @@ class SecureInputFilter {
 	protected static $allowKeyNameRegex = '/^[a-z0-9:_\.\/\-]+$/i';
 
 /**
+ * Regex pattern of invalid key name 
+ * check SQL comment 
+ *
+ * @access protected
+ * @var array
+ */
+	protected static $denySqlComment = '/--/';
+
+/**
  * Inserts multiple values into a table
  *
  * @access public
@@ -60,7 +69,10 @@ class SecureInputFilter {
 		if(is_array($data)) {
 			foreach($data as $key => $val) {
 				//delete invalid key name
-				if(in_array($key, self::$deleteKeys, true) or !preg_match(self::$allowKeyNameRegex, $key)) {
+				if(in_array($key, self::$deleteKeys, true)
+				   	or !preg_match(self::$allowKeyNameRegex, $key)
+				   	or preg_match(self::$denySqlComment, $key)
+				) {
 					unset($data[$key]);
 				}else {
 					$data[$key] = self::clean_key_value($val);
